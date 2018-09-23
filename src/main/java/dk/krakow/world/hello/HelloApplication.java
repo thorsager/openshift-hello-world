@@ -7,20 +7,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-public class HelloApplication {
-	public static void main(String[] args) {
-		SpringApplication.run(HelloApplication.class, args);
-	}
-
-}
-
 @RestController
 @Slf4j
-class HelloController {
-
+public class HelloApplication {
 	@GetMapping("/")
 	public String getWorld() {
 		log.info("Saying hello..");
 		return "Brave new World!!";
 	}
+
+	public static void main(String[] args) {
+		SpringApplication.run(HelloApplication.class, args);
+	}
+
 }
