@@ -23,7 +23,7 @@ public class HelloApplication {
 	@GetMapping("/")
 	public String getWorld() {
 		log.info("Saying hello..");
-		return "["+new Date()+"] :I am "+hostname+", "+message;
+		return "["+new Date()+"]: I am "+hostname+", "+message;
 	}
 
 	public static void main(String[] args) {
