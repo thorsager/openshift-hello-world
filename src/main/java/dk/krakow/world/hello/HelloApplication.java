@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
+
 @SpringBootApplication
 @RestController
 @Slf4j
@@ -21,7 +23,7 @@ public class HelloApplication {
 	@GetMapping("/")
 	public String getWorld() {
 		log.info("Saying hello..");
-		return "I am "+hostname+", "+message;
+		return "["+new Date()+"] :I am "+hostname+", "+message;
 	}
 
 	public static void main(String[] args) {
