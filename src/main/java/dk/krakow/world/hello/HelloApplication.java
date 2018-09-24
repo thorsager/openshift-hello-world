@@ -15,10 +15,13 @@ public class HelloApplication {
 	@Value("${HELLO_MESSAGE:Hello World..}")
 	private String message;
 
+	@Value("${HOSTNAME:localhost}")
+	private String hostname;
+
 	@GetMapping("/")
 	public String getWorld() {
 		log.info("Saying hello..");
-		return message;
+		return "I am "+hostname+", "+message;
 	}
 
 	public static void main(String[] args) {
